@@ -12,7 +12,8 @@ const Home = () => {
     //Should not make useEffect asynchronous, but a function inside can be
     useEffect(() => {
         const fetchWorkouts = async () => {
-            const response = await fetch('/api/workouts');
+            //get rid of /api/workouts, replace with address of web service
+            const response = await fetch('https://workoutlog-4z21.onrender.com/api/workouts');
             //turn the response into a json object
             const json = await response.json();
 

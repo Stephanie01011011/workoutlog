@@ -19,6 +19,7 @@ app.use((req, res, next)=> {
 })
 
 //routes
+
 app.use('/api/workouts', workoutRoutes);
 
 
