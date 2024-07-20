@@ -13,7 +13,7 @@ const Home = () => {
     useEffect(() => {
         const fetchWorkouts = async () => {
             //get rid of /api/workouts, replace with address of web service
-            const response = await fetch('https://workoutlog-4z21.onrender.com/api/workouts');
+            const response = await fetch('https://workoutlog-4z21.onrender.com/');
             //turn the response into a json object
             console.log(response);
             const json = await response.json();
