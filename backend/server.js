@@ -3,6 +3,7 @@ require('dotenv').config()
 const workoutRoutes = require('./routes/workouts')
 //npm i express
 const express = require('express');
+const cors = require('cors');
 
 //mongoose connects to the server, and helps create structure for data
 //npm i mongoose
@@ -10,7 +11,10 @@ const mongoose = require('mongoose');
 
 
 const app = express();
-
+/*{
+    origin: '*'
+}*/
+app.use(cors());
 app.use(express.json());
 //middleware
 app.use((req, res, next)=> {
